@@ -1,0 +1,160 @@
+<!-- templates/navbar.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SkillNexus Navbar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.05; }
+    }
+    .animate-blink {
+      animation: blink 3s infinite;
+    }
+  </style>
+
+  <style>
+    .caret::after {
+      content: '▼';
+      font-size: 0.6rem;
+      margin-left: 4px;
+    }
+   </style>
+
+</head>
+<body class="bg-gray-100">
+
+<!-- Top Contact Bar -->
+<div class="bg-gray-800 text-white text-sm px-4 py-2 flex justify-between items-center flex-wrap fixed top-0 left-0 w-full z-50">
+  <div class="w-full sm:w-auto mb-1 sm:mb-0 animate-blink ml-4" style="margin-left: 200px;">
+    Learn Industry-Level Skills with Our Expert Trainers!
+  </div>
+  <div class="w-full sm:w-auto text-right mr-6" style="margin-right: 80px;">
+    <span>📧 info@skillnexus.com</span>
+    <span class="mx-3"> </span>
+    <span>📞 +91 8146382470</span>
+  </div>
+</div>
+
+
+  <!-- Navbar -->
+<nav class="bg-white fixed w-full top-[32px] z-40 border-b border-gray-200 h-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <!-- Logo -->
+        <div class="flex-shrink-0 flex items-center" style="margin-left: 30px;">
+          <a href="{% url 'home' %}" class="text-xl font-bold hover:text-leaf transition">
+            <img src="{% static '/assets/images/skillnexus.jpeg' %}" alt="SkillNexus Logo" class="h-10" style="height: 64px;">
+          </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex gap-4 items-center space-x-6" style="margin-right: 25px;">
+          <a href="{% url 'home' %}" class="text-gray-700 hover:text-orange-500 font-medium">Home</a>
+          <a href="{% url 'about-us' %}" class="text-gray-700 hover:text-orange-500 font-medium">About us</a>
+
+          <!-- Services Dropdown -->
+          <div class="relative" id="servicesBtn">
+            <button onclick="toggleDropdown('servicesDropdown')" class="flex items-center text-gray-700 hover:text-orange-500 font-medium focus:outline-none">
+              Services <span class="caret mb-hide ml-1"></span>
+            </button>
+            <div id="servicesDropdown" class="hidden absolute bg-white shadow-lg rounded-md mt-2 w-96 p-4 z-50 gap-6 flex">
+              <div class="w-1/2 flex flex-col gap-2">
+                <a href="#" class="text-sm hover:text-orange-500">Web Development</a>
+                <a href="#" class="text-sm hover:text-orange-500">App Development</a>
+                <a href="#" class="text-sm hover:text-orange-500">Digital Marketing</a>
+                <a href="#" class="text-sm hover:text-orange-500">UI/UX Design</a>
+              </div>
+              <div class="w-1/2 flex flex-col gap-2">
+                <a href="#" class="text-sm hover:text-orange-500">Cloud Services</a>
+                <a href="#" class="text-sm hover:text-orange-500">Cyber Security</a>
+                <a href="#" class="text-sm hover:text-orange-500">Maintenance & Support</a>
+                <a href="#" class="text-sm hover:text-orange-500">Consulting</a>
+              </div>
+            </div>
+          </div>
+
+                  <!-- Courses Dropdown -->
+          <div class="relative" id="coursesBtn">
+            <button onclick="toggleDropdown('coursesDropdown')" class="flex items-center text-gray-700 hover:text-orange-500 font-medium focus:outline-none">
+              Our Courses <span class="caret mb-hide ml-1"></span>
+            </button>
+            <div id="coursesDropdown" class="hidden absolute bg-white shadow-lg rounded-md mt-2 w-96 p-4 z-50 gap-6 flex">
+              <div class="w-1/2 flex flex-col gap-2">
+                <a href="#" class="text-sm hover:text-orange-500">Python Full Stack</a>
+                <a href="#" class="text-sm hover:text-orange-500">Java Development</a>
+                <a href="#" class="text-sm hover:text-orange-500">MERN Stack</a>
+                <a href="#" class="text-sm hover:text-orange-500">Data Science</a>
+              </div>
+              <div class="w-1/2 flex flex-col gap-2">
+                <a href="#" class="text-sm hover:text-orange-500">DevOps</a>
+                <a href="#" class="text-sm hover:text-orange-500">AWS Cloud</a>
+                <a href="#" class="text-sm hover:text-orange-500">UI/UX Design</a>
+                <a href="#" class="text-sm hover:text-orange-500">Cyber Security</a>
+              </div>
+            </div>
+          </div>
+
+
+          <a href="{% url 'Blog' %}" class="text-gray-700 hover:text-orange-500 font-medium">Blog</a>
+          <a href="{% url 'Contact-us' %}" class="text-gray-700 hover:text-orange-500 font-medium">Contact us</a>
+          <a href="{% url 'Book-demo' %}" class="text-white bg-orange-500 px-3 py-1 rounded-md animate-blink font-medium">Book Demo</a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <div class="md:hidden flex items-center">
+          <button onclick="toggleMenu()" class="text-gray-700 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                 viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden bg-white px-4 pt-2 pb-4 shadow-lg">
+      <a href="{% url 'home' %}" class="block py-2 text-gray-700 hover:text-orange-500 font-medium">Home</a>
+      <a href="{% url 'about-us' %}" class="block py-2 text-gray-700 hover:text-orange-500 font-medium">About us</a>
+      <a href="{% url 'services' %}" class="block py-2 text-gray-700 hover:text-orange-500 font-medium">Services</a>
+      <a href="{% url 'Courses' %}" class="block py-2 text-gray-700 hover:text-orange-500 font-medium">Our Courses</a>
+      <a href="{% url 'Blog' %}" class="block py-2 text-gray-700 hover:text-orange-500 font-medium">Blog</a>
+      <a href="{% url 'Contact-us' %}" class="block py-2 text-gray-700 hover:text-orange-500 font-medium">Contact us</a>
+      <a href="{% url 'Book-demo' %}" class="block py-2 text-white bg-orange-500 rounded-md animate-blink font-medium">Book Demo</a>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+
+<!-- services/courses -->
+  <script>
+    function toggleDropdown(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle('hidden');
+    }
+
+    // Close other dropdowns when one is opened (optional enhancement)
+    document.addEventListener("click", function(e) {
+      const servicesBtn = document.getElementById("servicesBtn");
+      const coursesBtn = document.getElementById("coursesBtn");
+      const servicesDropdown = document.getElementById("servicesDropdown");
+      const coursesDropdown = document.getElementById("coursesDropdown");
+
+      if (!servicesBtn.contains(e.target)) servicesDropdown.classList.add("hidden");
+      if (!coursesBtn.contains(e.target)) coursesDropdown.classList.add("hidden");
+    });
+  </script>
+
+</body>
+</html>
