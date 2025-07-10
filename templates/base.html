@@ -1,15 +1,49 @@
 <!-- templates/base.html -->
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>{% block title %}SkillNexus{% endblock %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- wready section css -->
+  <link rel="stylesheet" href="{% static 'assets/css/home.css' %}">
+
+
+  <!-- Global Styles -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #fcfcfd;
+      color: #333;
+    }
+    @keyframes scrollBadges {
+      0%   { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    .animate-blink {
+      animation: blink 3s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.05; }
+    }
+    .caret::after {
+      content: '▼';
+      font-size: 0.6rem;
+      margin-left: 4px;
+    }
+  </style>
 </head>
-<body>
+<body class="bg-gray-100">
+
   {% include 'includes/navbar.html' %}
 
   <main>
@@ -17,5 +51,7 @@
   </main>
 
   {% include 'includes/footer.html' %}
+
+  {% block scripts %}{% endblock %}
 </body>
 </html>

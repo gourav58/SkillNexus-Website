@@ -1,236 +1,264 @@
-s{% extends 'base.html' %}
+{% extends 'base.html' %}
 {% block title %}Home - SkillNexus{% endblock %}
-
 {% block content %}
 
-<style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #fcfcfd;
+      color: #333;
+    }
 
-  #about-section {
-  padding: 60px 20px;
-  background-color: #f9f9fb;
-}
+    .who-we-are {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 40px 10%;
+      gap: 40px;
+      background: #f9f9f9;
+    }
 
-.about-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: space-between;
-  align-items: flex-start;
-}
+    .who-left {
+      flex: 1 1 500px;
+      max-width: 600px;
+    }
 
-.about-left {
-  flex: 1;
-  min-width: 320px;
-}
+    .who-left h4 {
+      color: #7a7a7a;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
 
-.about-left h4 {
-  color: #888;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-}
+    .who-left h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 0;
+    }
 
-.about-left h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1.3;
-  margin-bottom: 20px;
-}
+    .who-left h1 span {
+      background: linear-gradient(to right, #00b894, #0984e3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-.highlight {
-  background: linear-gradient(90deg, #00a8cc, #007bff, #8a6fff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+    .who-left p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-top: 20px;
+      color: #555;
+    }
 
-.about-left p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #555;
-  margin-bottom: 12px;
-}
+    .who-left .bold {
+      font-weight: 600;
+      color: #222;
+    }
 
-.bold-text {
-  font-weight: 600;
-  color: #222;
-}
+    .btn-learn {
+      margin-top: 25px;
+      padding: 10px 20px;
+      border: 1px solid #00b894;
+      border-radius: 25px;
+      background: white;
+      color: #00b894;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
 
-.learn-btn {
-  display: inline-block;
-  padding: 12px 24px;
-  border: 2px solid #00a8cc;
-  color: #00a8cc;
-  font-weight: 600;
-  border-radius: 30px;
-  text-decoration: none;
-  margin-top: 20px;
-  transition: all 0.3s ease;
-}
+    .btn-learn:hover {
+      background: #00b894;
+      color: white;
+    }
 
-.learn-btn:hover {
-  background-color: #00a8cc;
-  color: #fff;
-}
+    .badges {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      overflow-x: auto;
+      gap: 30px;
+      margin-top: 40px;
+      padding-bottom: 10px;
+      animation: scrollBadges 30s linear infinite;
+    }
 
-.about-right {
-  flex: 0.5;
-  min-width: 250px;
-}
+    .badges img {
+      height: 60px;
+      flex-shrink: 0;
+    }
 
-.stat-box {
-  margin-bottom: 30px;
-}
+    @keyframes scrollBadges {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
 
-.stat-box h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  background: linear-gradient(90deg, #00a8cc, #8BC34A);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+    .who-right {
+      flex: 1 1 300px;
+      max-width: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+    }
 
-.stat-box p {
-  font-size: 1rem;
-  color: #666;
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .stat-block {
+      width: 45%;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #5fa772;
+    }
+
+    .stat-label {
+      font-size: 0.95rem;
+      color: #888;
+    }
+
+    @media (max-width: 992px) {
+      .who-we-are {
+        flex-direction: column;
+        padding: 60px 20px;
+      }
+      .who-right {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: space-between;
+      }
+      .stat-block {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .stat-block {
+        width: 100%;
+        text-align: left;
+      }
+    }
+  </style>
+
+  <style>
+
+    .badges-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 40px;
 }
 
 .badges {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 40px;
+  gap: 30px;
+  animation: scrollBadges 25s linear infinite;
 }
 
 .badges img {
   height: 60px;
-  object-fit: contain;
+  flex-shrink: 0;
 }
 
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .about-right {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 30px;
-  }
-
-  .stat-box {
-    margin-bottom: 0;
-    flex: 1;
-    text-align: center;
-  }
-
-  .badges {
-    justify-content: center;
-  }
+@keyframes scrollBadges {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
 
-</style>
+  </style>
+
 <main>
   <!-- Hero Section -->
-  <section class="bg-white min-h-screen flex flex-col md:flex-row items-center px-6 md:px-12 lg:px-20 py-12" style="background-image: linear-gradient(180deg, #67B26F 0%, #70a4bd 100%);">
-    <!-- Left Content -->
-    <div class="w-full md:w-1/2 space-y-6">
+  <section class="py-20 text-white" style="background-image: linear-gradient(to bottom, #48bb78, #6885b5);">
+    <div class="container mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center gap-12" style="margin-top: 65px;">
 
-      <!-- Main Heading -->
-      <h1 class="text-5xl md:text-5xl font-bold text-gray-900 lg:leading-13" style="color: white; margin-top: 60px;">
-        Expert Training Since <br> 2023, Certified with Excellence
+      <!-- Left -->
+      <div class="w-full md:w-1/2 space-y-6" style="margin-left: 50px;">
+      <h1 class="text-4xl md:text-5xl font-bold leading-tight text-white text-center">
+        The Best Computer Training Institute in<br />
+        <span class="block text-[white] text-5xl">Pathankot</span>
       </h1>
 
-      <!-- Subheading with Typing Effect -->
-      <p class="text-lg text-black">
-        <span id="start-text" class="font-medium"></span>
-        <span id="typing-text" class="font-bold"></span>
-      </p>
+        <p class="text-lg" style="color: black; margin-top: 50px;">
+          <span id="start-text"></span><span id="typing-text" class="font-bold"></span>
+        </p>
 
-      <!-- CTA Buttons -->
-      <div class="flex flex-col sm:flex-row items-center gap-4 pt-2">
-        <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg text-base font-semibold transition">
-          Call Expert
-        </a>
-        <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg text-base font-semibold transition">
-          Watch Video
-        </a>
+        <div class="flex flex-col sm:flex-row gap-4 pt-4">
+          <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition">Call Expert</a>
+          <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition">Watch Video</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Right Visual -->
-    <div class="w-full md:w-1/2 mt-12 md:mt-0 relative" style="margin-top: 60px;">
-      <!-- Colorful Abstract Background -->
-      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[360px] h-[360px] bg-gradient-to-tr from-orange-400 via-green-400 to-teal-400 rounded-full blur-3xl opacity-20 z-0"></div>
-
-      <!-- Image -->
-      <img src="/static/assets/images/indus.png" alt="Doctor" class="relative z-10 mx-auto w-[300px] md:w-[360px] lg:w-[400px]" />
+      <!-- Right -->
+      <div class="w-full md:w-1/2 relative">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-80 bg-gradient-to-tr from-orange-400 via-green-400 to-teal-400 rounded-full blur-3xl opacity-20 z-0"></div>
+        <img src="/static/assets/images/indus.png" alt="Hero Image" class="relative z-10 mx-auto w-72 md:w-80 lg:w-96" />
+      </div>
     </div>
   </section>
 
-  <section id="about-section">
-    <div class="about-container">
+<!-- who we are -->
+<section class="who-we-are">
+  <div class="container mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center gap-12" style="margin-top: 65px;">
+    
+    <!-- Left Column -->
+    <div class="who-left">
+      <h1>
+        Ready <span>to Embrace on the</span><br>
+        Journey of Success?
+      </h1>
+      <p>Contact us today to schedule a project discussion.</p>
 
-      <!-- Left Side -->
-      <div class="about-left">
-        <h4>Who we are</h4>
-        <h1>
-          Engineering <span class="highlight">digital experiences</span><br>
-          with our vision, insight, and experience
-        </h1>
-        <p>
-          Founded in 2010, we believe in building a future where People, Process, and Technology drive lasting change.
-        </p>
-        <p>
-          Whatever we do is rooted in customer-centricity. We deliver tailored solutions that enhance your business performance and secure competitive advantages amid disruptions.
-        </p>
-        <p class="bold-text">
-          Blending technology with innovation for end-to-end CX
-        </p>
-        <a href="#" class="learn-btn">Learn More →</a>
-
-        <!-- Logos -->
+      <!-- Wrapped animation inside container box -->
+      <div class="badges-wrapper">
         <div class="badges">
-          <img src="https://dummyimage.com/80x60/ccc/000&text=Clutch" alt="Clutch">
-          <img src="https://dummyimage.com/80x60/ccc/000&text=ISO+Dev" alt="ISO">
-          <img src="https://dummyimage.com/80x60/ccc/000&text=GPTW" alt="GPTW">
-          <img src="https://dummyimage.com/80x60/ccc/000&text=Deloitte" alt="Deloitte">
-          <img src="https://dummyimage.com/60x60/ccc/000&text=ISO+9001" alt="ISO 9001">
-          <img src="https://dummyimage.com/60x60/ccc/000&text=ISO+27001" alt="ISO 27001">
-        </div>
-      </div>
-
-      <!-- Right Side -->
-      <div class="about-right">
-        <div class="stat-box">
-          <h2>14+</h2>
-          <p>Years in Business</p>
-        </div>
-        <div class="stat-box">
-          <h2>300+</h2>
-          <p>Global Clients</p>
-        </div>
-        <div class="stat-box">
-          <h2>250+</h2>
-          <p>Tech Experts</p>
+          <img src="/static/assets/images/airtel.png" alt="airtel" />
+          <img src="/static/assets/images/ibm.png" alt="ibm" />
+          <img src="/static/assets/images/infosys.png" alt="infosys" />
+          <img src="/static/assets/images/tcs.jpeg" alt="tcs" />
+          <img src="/static/assets/images/wipro.png" alt="wipro" />
         </div>
       </div>
     </div>
-  </section>
+
+    <!-- Right Column -->
+    <div class="who-right">
+      <div class="stats">
+        <div class="stat-block">
+          <div class="stat-number" data-target="5">0</div>
+          <div class="stat-label">Years in Business</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-number" data-target="100">0</div>
+          <div class="stat-label">Global Clients</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-number" data-target="150">0</div>
+          <div class="stat-label">Tech Experts</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-number" data-target="50">0</div>
+          <div class="stat-label">Projects Delivered</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 </main>
 
 <!-- Typing Animation Script -->
 <script>
-  const starts = [
-    "We are ",
-    "We offer ",
-    "Get trained in ",
-    "Learn from ",
-    "Grow with "
-  ];
-
+  const starts = ["We are ", "We offer ", "Get trained in ", "Learn from ", "Grow with "];
   const phrases = [
     "Skillnexus Tech Solutions, Mohali",
     "100% Job-Oriented Courses",
@@ -239,11 +267,7 @@ s{% extends 'base.html' %}
     "Career Support & Placement Assistance"
   ];
 
-  let i = 0;
-  let j = 0;
-  let currentPhrase = [];
-  let isDeleting = false;
-  let isEnd = false;
+  let i = 0, j = 0, currentPhrase = [], isDeleting = false, isEnd = false;
 
   const typingText = document.getElementById('typing-text');
   const startText = document.getElementById('start-text');
@@ -273,9 +297,7 @@ s{% extends 'base.html' %}
         currentPhrase = [];
         isDeleting = false;
         i++;
-        if (i === phrases.length) {
-          i = 0;
-        }
+        if (i === phrases.length) i = 0;
       }
     }
 
@@ -286,5 +308,40 @@ s{% extends 'base.html' %}
   loopTyping();
 </script>
 
+  <script>
+    // Counter animation with IntersectionObserver
+    const counters = document.querySelectorAll('.stat-number');
+
+    const animateCount = (counter) => {
+      const target = +counter.getAttribute('data-target');
+      let count = 0;
+      const increment = target > 100 ? Math.ceil(target / 100) : 1;
+      const duration = 1000; // total duration of animation in ms
+      const intervalTime = Math.floor(duration / (target / increment));
+
+      const updateCount = () => {
+        count += increment;
+        if (count < target) {
+          counter.innerText = count;
+          setTimeout(updateCount, intervalTime);
+        } else {
+          counter.innerText = target + '+';
+        }
+      }
+
+      updateCount();
+    };
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCount(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.6 });
+
+    counters.forEach(counter => observer.observe(counter));
+  </script>
 
 {% endblock %}

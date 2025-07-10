@@ -1,179 +1,11 @@
+<!-- templates/home.html -->
 {% extends 'base.html' %}
+{% load static %}
+
 {% block title %}Home - SkillNexus{% endblock %}
+
 {% block content %}
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #fcfcfd;
-      color: #333;
-    }
-
-    .who-we-are {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      padding: 40px 10%;
-      gap: 40px;
-      background: #f9f9f9;
-    }
-
-    .who-left {
-      flex: 1 1 500px;
-      max-width: 600px;
-    }
-
-    .who-left h4 {
-      color: #7a7a7a;
-      font-weight: 400;
-      margin-bottom: 10px;
-    }
-
-    .who-left h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin: 0;
-    }
-
-    .who-left h1 span {
-      background: linear-gradient(to right, #00b894, #0984e3);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .who-left p {
-      font-size: 1rem;
-      line-height: 1.6;
-      margin-top: 20px;
-      color: #555;
-    }
-
-    .who-left .bold {
-      font-weight: 600;
-      color: #222;
-    }
-
-    .btn-learn {
-      margin-top: 25px;
-      padding: 10px 20px;
-      border: 1px solid #00b894;
-      border-radius: 25px;
-      background: white;
-      color: #00b894;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .btn-learn:hover {
-      background: #00b894;
-      color: white;
-    }
-
-    .badges {
-      display: flex;
-      flex-wrap: nowrap;
-      align-items: center;
-      overflow-x: auto;
-      gap: 30px;
-      margin-top: 40px;
-      padding-bottom: 10px;
-      animation: scrollBadges 30s linear infinite;
-    }
-
-    .badges img {
-      height: 60px;
-      flex-shrink: 0;
-    }
-
-    @keyframes scrollBadges {
-      0%   { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
-    }
-
-    .who-right {
-      flex: 1 1 300px;
-      max-width: 350px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 30px;
-    }
-
-    .stats {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .stat-block {
-      width: 45%;
-    }
-
-    .stat-number {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #5fa772;
-    }
-
-    .stat-label {
-      font-size: 0.95rem;
-      color: #888;
-    }
-
-    @media (max-width: 992px) {
-      .who-we-are {
-        flex-direction: column;
-        padding: 60px 20px;
-      }
-      .who-right {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 40px;
-        justify-content: space-between;
-      }
-      .stat-block {
-        width: 45%;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .stat-block {
-        width: 100%;
-        text-align: left;
-      }
-    }
-  </style>
-
-  <style>
-
-    .badges-wrapper {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  margin-top: 40px;
-}
-
-.badges {
-  display: flex;
-  gap: 30px;
-  animation: scrollBadges 25s linear infinite;
-}
-
-.badges img {
-  height: 60px;
-  flex-shrink: 0;
-}
-
-@keyframes scrollBadges {
-  0%   { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-
-  </style>
 
 <main>
   <!-- Hero Section -->
@@ -184,7 +16,7 @@
       <div class="w-full md:w-1/2 space-y-6" style="margin-left: 50px;">
       <h1 class="text-4xl md:text-5xl font-bold leading-tight text-white text-center">
         The Best Computer Training Institute in<br />
-        <span class="block text-[white] text-5xl">Pathankot</span>
+        <span class="block text-[white] text-5xl">Canada</span>
       </h1>
 
         <p class="text-lg" style="color: black; margin-top: 50px;">
@@ -205,9 +37,10 @@
     </div>
   </section>
 
+  
 <!-- who we are -->
 <section class="who-we-are">
-  <div class="container mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center gap-12" style="margin-top: 65px;">
+  <div class="container mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center gap-12" >
     
     <!-- Left Column -->
     <div class="who-left">
@@ -220,6 +53,12 @@
       <!-- Wrapped animation inside container box -->
       <div class="badges-wrapper">
         <div class="badges">
+          <img src="/static/assets/images/airtel.png" alt="airtel" />
+          <img src="/static/assets/images/ibm.png" alt="ibm" />
+          <img src="/static/assets/images/infosys.png" alt="infosys" />
+          <img src="/static/assets/images/tcs.jpeg" alt="tcs" />
+          <img src="/static/assets/images/wipro.png" alt="wipro" />
+
           <img src="/static/assets/images/airtel.png" alt="airtel" />
           <img src="/static/assets/images/ibm.png" alt="ibm" />
           <img src="/static/assets/images/infosys.png" alt="infosys" />
@@ -253,10 +92,287 @@
   </div>
 </section>
 
+<section class="bg-gray-100 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="flex items-center justify-center mb-6">
+    <div class="h-px w-8 bg-gradient-to-r from-[#6885b5] to-transparent"></div>
+    <p class="mx-3 text-[#6885b5] font-semibold uppercase tracking-wide text-sm sm:text-base">Training Programs</p>
+    <div class="h-px w-8 bg-gradient-to-l from-[#6885b5] to-transparent"></div>
+  </div>
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-12" style="color: #2c569c;">
+      Learn In-Demand Skills With Job Oriented Courses
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Card 1 -->
+      <a href="#" class="block bg-white rounded-xl shadow hover:shadow-lg transition p-5 text-center">
+        <img src="/static/assets/images/php.webp" alt="PHP" class="rounded-md mb-4 h-40 w-full object-cover transition-transform duration-300 hover:-translate-y-1">
+        <h3 class="text-[#6885b5] font-bold text-lg mb-3">PHP Web Development Course</h3>
+        <div class="flex justify-center items-center flex-wrap gap-4 text-sm text-black mb-1">
+          <div class="flex items-center gap-1 text-[#6885b5]">
+            <span class="text-lg">👤</span>
+            <span class="text-black">Duration - 4 Months</span>
+          </div>
+          <div class="flex items-center gap-1 text-[#6885b5]">
+            <span class="text-lg">✔️</span>
+            <span class="text-black">5 Modules</span>
+          </div>
+        </div>
+        <div class="flex justify-center items-center gap-1 text-sm text-[#6885b5] mb-3">
+          <span class="text-lg">✔️</span>
+          <span class="text-black">Skill in High Demand</span>
+        </div>
+        <p class="text-black text-sm mb-3">Are you searching for the Best Institute for PHP Training in Chandigarh? Don’t worry, we are here with the solution.</p>
+        <div class="text-yellow-500 text-sm" style="font-size:20px";>★★★★☆</div>
+      </a>
+
+      <!-- Card 2 -->
+      <a href="#" class="block bg-white rounded-xl shadow hover:shadow-lg transition p-5 text-center">
+        <img src="/static/assets/images/python.webp" alt="Python" class="rounded-md mb-4 h-40 w-full object-cover transition-transform duration-300 hover:-translate-y-1">
+        <h3 class="text-[#6885b5] font-bold text-lg mb-3">Python and Django Web Development</h3>
+        <div class="flex justify-center items-center flex-wrap gap-4 text-sm text-black mb-1">
+          <div class="flex items-center gap-1 text-[#6885b5]">
+            <span class="text-lg">👤</span>
+            <span class="text-black">Duration - 4 Months</span>
+          </div>
+          <div class="flex items-center gap-1 text-[#6885b5]">
+            <span class="text-lg">✔️</span>
+            <span class="text-black">5 Modules</span>
+          </div>
+        </div>
+        <div class="flex justify-center items-center gap-1 text-sm text-[#6885b5] mb-3">
+          <span class="text-lg">✔️</span>
+          <span class="text-black">Skill in High Demand</span>
+        </div>
+        <p class="text-black text-sm mb-3">Our in-depth Python curriculum is designed to fast-track your mastery of coding.</p>
+        <div class="text-yellow-500 text-sm" style="font-size:20px";>★★★★★</div>
+      </a>
+
+      <!-- Card 3 -->
+      <a href="#" class="block bg-white rounded-xl shadow hover:shadow-lg transition p-5 text-center">
+        <img src="/static/assets/images/fullstack.webp" alt="MERN Stack" class="rounded-md mb-4 h-40 w-full object-cover transition-transform duration-300 hover:-translate-y-1">
+        <h3 class="text-[#6885b5] font-bold text-lg mb-3">Full Stack Development (MERN Stack)</h3>
+        <div class="flex justify-center items-center flex-wrap gap-4 text-sm text-black mb-1">
+          <div class="flex items-center gap-1 text-[#6885b5]">
+            <span class="text-lg">👤</span>
+            <span class="text-black">Duration - 6 Months</span>
+          </div>
+          <div class="flex items-center gap-1 text-[#6885b5]">
+            <span class="text-lg">✔️</span>
+            <span class="text-black">8 Modules</span>
+          </div>
+        </div>
+        <div class="flex justify-center items-center gap-1 text-sm text-[#6885b5] mb-3">
+          <span class="text-lg">✔️</span>
+          <span class="text-black">Industry Standards</span>
+        </div>
+        <p class="text-black text-sm mb-3">Designed according to the latest industry standards with real-time project exposure.</p>
+        <div class="text-yellow-500 text-sm" style="font-size:20px";>★★★★☆</div>
+      </a>
+
+      <!-- Card 4 -->
+      <a href="#" class="block bg-white rounded-xl shadow hover:shadow-lg transition p-5 text-center">
+        <img src="/static/assets/images/ml.webp" alt="ML & Data Science" class="rounded-md mb-4 h-40 w-full object-cover transition-transform duration-300 hover:-translate-y-1">
+        <h3 class="text-[#6885b5] font-bold text-lg mb-3">Machine Learning And Data Science Training</h3>
+        <div class="flex justify-center items-center flex-wrap gap-4 text-sm text-black mb-1">
+          <div class="flex items-center gap-1 text-[#6885b5]">
+            <span class="text-lg">👤</span>
+            <span class="text-black">10 to 14 Months</span>
+          </div>
+          <div class="flex items-center gap-1 text-[#6885b5]">
+            <span class="text-lg">✔️</span>
+            <span class="text-black">15 Modules</span>
+          </div>
+        </div>
+        <div class="flex justify-center items-center gap-1 text-sm text-[#6885b5] mb-3">
+          <span class="text-lg">✔️</span>
+          <span class="text-black">Offline / Online Classes</span>
+        </div>
+        <p class="text-black text-sm mb-3">Master ML & AI by building 20+ projects — including apps, games, and automation.</p>
+        <div class="text-yellow-500 text-sm" style="font-size:20px";>★★★★★</div>
+      </a>
+
+      <!-- Card 5 -->
+      <a href="#" class="block bg-white rounded-xl shadow hover:shadow-lg transition p-5 text-center">
+        <img src="/static/assets/images/cloud.webp" alt="Cloud AWS" class="rounded-md mb-4 h-40 w-full object-cover transition-transform duration-300 hover:-translate-y-1">
+        <h3 class="text-[#6885b5] font-bold text-lg mb-3">Cloud Computing With AWS & Azure</h3>
+        <div class="flex justify-center items-center flex-wrap gap-4 text-sm text-black mb-1">
+          <div class="flex items-center gap-1 text-[#6885b5]">
+            <span class="text-lg">👤</span>
+            <span class="text-black">Duration - 4 Months</span>
+          </div>
+          <div class="flex items-center gap-1 text-[#6885b5]">
+            <span class="text-lg">✔️</span>
+            <span class="text-black">12 Modules</span>
+          </div>
+        </div>
+        <div class="flex justify-center items-center gap-1 text-sm text-[#6885b5] mb-3">
+          <span class="text-lg">✔️</span>
+          <span class="text-black">Skill in High Demand</span>
+        </div>
+        <p class="text-black text-sm mb-3">AWS Cloud journey with real-time projects, preparing you for global certifications.</p>
+        <div class="text-yellow-500 text-sm" style="font-size:20px";>★★★★★</div>
+      </a>
+
+      <!-- Card 6 -->
+      <a href="#" class="block bg-white rounded-xl shadow hover:shadow-lg transition p-5 text-center">
+        <img src="/static/assets/images/cyber.webp" alt="Cybersecurity" class="rounded-md mb-4 h-40 w-full object-cover transition-transform duration-300 hover:-translate-y-1">
+        <h3 class="text-[#6885b5] font-bold text-lg mb-3">Cybersecurity With CCNA, Linux & Cloud</h3>
+        <div class="flex justify-center items-center flex-wrap gap-4 text-sm text-black mb-1">
+          <div class="flex items-center gap-1 text-[#6885b5]">
+            <span class="text-lg">👤</span>
+            <span class="text-black">Duration - 4 Months</span>
+          </div>
+          <div class="flex items-center gap-1 text-[#6885b5]">
+            <span class="text-lg">✔️</span>
+            <span class="text-black">25 Modules</span>
+          </div>
+        </div>
+        <div class="flex justify-center items-center gap-1 text-sm text-[#6885b5] mb-3">
+          <span class="text-lg">✔️</span>
+          <span class="text-black">Offline / Online Classes</span>
+        </div>
+        <p class="text-black text-sm mb-3">Complete your Cybersecurity Course starting from basics to advanced system protection & hacking.</p>
+        <div class="text-yellow-500 text-sm" style="font-size:20px";>★★★★☆</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray-50 py-16 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+  <div class="flex items-center justify-center mb-6">
+    <div class="h-px w-8 bg-gradient-to-r from-[#6885b5] to-transparent"></div>
+    <p class="mx-3 text-[#6885b5] font-semibold uppercase tracking-wide text-sm sm:text-base">Job Assistance</p>
+    <div class="h-px w-8 bg-gradient-to-l from-[#6885b5] to-transparent"></div>
+  </div>
+    <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4" style="color: #2c569c;">Student Placement Plan</h2>
+    <p class="text-gray-600 max-w-3xl mx-auto mb-12">
+      Seize opportunities for yourself with the SkillNexus career journey guide. From Interview strategies to <strong><em>industrial training in Mohali</em></strong>, we’re here to help you succeed in choosing your ideal job. Numerous jobs are waiting for trainees in this competitive marketplace.
+    </p>
+
+    <!-- Cards Container -->
+    <div class="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+
+      <!-- Center Connecting Line -->
+      <div class="hidden lg:block absolute left-0 right-0 top-1/2 transform -translate-y-1/2 h-[2px] bg-gray-300 z-0"></div>
+
+      <!-- Card 1 -->
+      <div class="relative z-10 flex flex-col items-center text-center bg-[#6885b5] text-white p-6 rounded-2xl shadow-md transform transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl hover:bg-[#5c76a3]">
+        <div class="absolute -top-6 bg-white text-[#6885b5] font-bold w-10 h-10 flex items-center justify-center rounded-full shadow-md border-2 border-[#6885b5]">1</div>
+        <img src="/static/assets/icons/training-program.webp" alt="Training" class="h-20 mb-4 mt-6">
+        <h3 class="text-lg font-bold mb-2">Training Program</h3>
+        <p class="text-sm leading-relaxed">At SkillNexus, we schedule proper counseling to choose your particular course.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="relative z-10 flex flex-col items-center text-center bg-white border border-[#6885b5] text-[#1f2937] p-6 rounded-2xl shadow-md transform transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl hover:bg-[#f0f5ff]">
+        <div class="absolute -top-6 bg-white text-[#6885b5] font-bold w-10 h-10 flex items-center justify-center rounded-full shadow-md border-2 border-[#6885b5]">2</div>
+        <img src="/static/assets/icons/live-projects.webp" alt="Live Projects" class="h-20 mb-4 mt-6">
+        <h3 class="text-lg font-bold text-[#6885b5] mb-2">Live Projects</h3>
+        <p class="text-sm leading-relaxed">We allow students to work on both demo and live projects for exposure.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="relative z-10 flex flex-col items-center text-center bg-[#6885b5] text-white p-6 rounded-2xl shadow-md transform transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl hover:bg-[#5c76a3]">
+        <div class="absolute -top-6 bg-white text-[#6885b5] font-bold w-10 h-10 flex items-center justify-center rounded-full shadow-md border-2 border-[#6885b5]">3</div>
+        <img src="/static/assets/icons/assignment-process.webp" alt="Assignment" class="h-20 mb-4 mt-6">
+        <h3 class="text-lg font-bold mb-2">Assignment Process</h3>
+        <p class="text-sm leading-relaxed">Students will be assigned to prepare documentation for the flow of the projects.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="relative z-10 flex flex-col items-center text-center bg-white border border-[#6885b5] text-[#1f2937] p-6 rounded-2xl shadow-md transform transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl hover:bg-[#f0f5ff]">
+        <div class="absolute -top-6 bg-white text-[#6885b5] font-bold w-10 h-10 flex items-center justify-center rounded-full shadow-md border-2 border-[#6885b5]">4</div>
+        <img src="/static/assets/icons/interview-calls.webp" alt="Interview" class="h-20 mb-4 mt-6">
+        <h3 class="text-lg font-bold text-[#6885b5] mb-2">Interview Calls</h3>
+        <p class="text-sm leading-relaxed">After training completion, we will spread your candidature in the open market.</p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="relative z-10 flex flex-col items-center text-center bg-[#6885b5] text-white p-6 rounded-2xl shadow-md transform transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl hover:bg-[#5c76a3]">
+        <div class="absolute -top-6 bg-white text-[#6885b5] font-bold w-10 h-10 flex items-center justify-center rounded-full shadow-md border-2 border-[#6885b5]">5</div>
+        <img src="/static/assets/icons/student-placed.webp" alt="Student Placed" class="h-20 mb-4 mt-6">
+        <h3 class="text-lg font-bold mb-2">Student Placed</h3>
+        <p class="text-sm leading-relaxed">We have placed more than 100 students in various IT companies.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="bg-white py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
+
+      <!-- Left Content -->
+      <div>
+        <div class="flex items-center mb-6">
+          <div class="h-px w-8 bg-gradient-to-r from-[#6885b5] to-transparent"></div>
+          <p class="mx-3 text-[#6885b5] font-semibold uppercase tracking-wide text-sm sm:text-base">Why Choose Us</p>
+          <div class="h-px w-8 bg-gradient-to-l from-[#6885b5] to-transparent"></div>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-snug mb-4">
+          For Excellent Performance We Focus
+          on <span class="text-[#2c569c]">During Training.</span>
+        </h2>
+        <p class="text-gray-600 mb-6 text-base">
+          We provide 100% Practical and Live project-based training
+        </p>
+
+        <!-- List with Icons -->
+        <ul class="space-y-3 text-sm sm:text-base text-gray-800">
+          <li class="flex items-start gap-3">
+            <span class="text-[#70b62c] text-lg">✔️</span>
+            100% Free Placement Assistance
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-[#70b62c] text-lg">✔️</span>
+            Complete Practical and Project-based Training
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-[#70b62c] text-lg">✔️</span>
+            Industrial Training by Industry Experts
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-[#70b62c] text-lg">✔️</span>
+            Special Doubt/Extra Classes
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-[#70b62c] text-lg">✔️</span>
+            Wifi, Study Material, and Video Modules
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-[#70b62c] text-lg">✔️</span>
+            Online-Live Classes Available for Distant Students
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-[#70b62c] text-lg">✔️</span>
+            Special PD and Interview Preparation Classes
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right Image (matches left content height) -->
+      <div class="h-full">
+        <img src="/static/assets/images/choose.png" alt="Why Choose Us" class="w-full h-full object-cover rounded-lg shadow-md">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
 
 </main>
 
-<!-- Typing Animation Script -->
+{% endblock %}
+
+{% block scripts %}
+
 <script>
   const starts = ["We are ", "We offer ", "Get trained in ", "Learn from ", "Grow with "];
   const phrases = [
