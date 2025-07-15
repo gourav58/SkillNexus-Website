@@ -1,0 +1,668 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Us - SkillNexus{% endblock %}
+
+{% block content %}
+
+<main>
+
+<!-- About Us Banner -->
+<section class="relative h-64 md:h-80 lg:h-96 overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img src="{% static 'assets/images/aboutus.jpg' %}" alt="About Us Banner" class="w-full h-full object-cover brightness-50">
+  </div>
+
+  <!-- Overlay Text -->
+  <div class="relative z-10 flex items-center justify-center h-full text-center">
+    <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-wide">
+      About us
+    </h1>
+  </div>
+</section>
+
+<section id="stats" class="bg-[#f9fafb] py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Heading -->
+    <div class="text-center mb-14">
+      <!-- <p class="text-sm uppercase tracking-widest text-[#6885b5] font-semibold">Our Achievements</p> -->
+      <div class="flex items-center justify-center mb-6">
+        <div class="h-px w-8 bg-gradient-to-r from-[#6885b5] to-transparent"></div>
+        <p class="mx-3 text-[#6885b5] font-semibold uppercase tracking-wide text-sm sm:text-base">Our Achievements</p>
+        <div class="h-px w-8 bg-gradient-to-l from-[#6885b5] to-transparent"></div>
+      </div>
+      <!-- <h2 class="text-4xl font-bold text-[#0d1b2a]">Skillnexus by the Numbers</h2> -->
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center">
+
+      <!-- Years of Excellence -->
+      <div class="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transition duration-300">
+        <div class="text-[#6885b5] text-4xl mb-3">
+          <i class="fas fa-calendar-check"></i>
+        </div>
+        <h3 class="text-4xl font-bold text-[#0d1b2a]">
+          <span class="count" data-target="15">0</span><span class="text-xl text-[#6885b5] align-top">+</span>
+        </h3>
+        <p class="text-gray-600 mt-2 text-base">Years of Excellence</p>
+      </div>
+
+      <!-- Students Trained -->
+      <div class="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transition duration-300">
+        <div class="text-[#6885b5] text-4xl mb-3">
+          <i class="fas fa-user-graduate"></i>
+        </div>
+        <h3 class="text-4xl font-bold text-[#0d1b2a]">
+          <span class="count" data-target="1200">0</span><span class="text-xl text-[#6885b5] align-top">+</span>
+        </h3>
+        <p class="text-gray-600 mt-2 text-base">Students Trained</p>
+      </div>
+
+      <!-- Successful Placements -->
+      <div class="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transition duration-300">
+        <div class="text-[#6885b5] text-4xl mb-3">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <h3 class="text-4xl font-bold text-[#0d1b2a]">
+          <span class="count" data-target="800">0</span><span class="text-xl text-[#6885b5] align-top">+</span>
+        </h3>
+        <p class="text-gray-600 mt-2 text-base">Successful Placements</p>
+      </div>
+
+      <!-- Live Projects -->
+      <div class="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transition duration-300">
+        <div class="text-[#6885b5] text-4xl mb-3">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+        <h3 class="text-4xl font-bold text-[#0d1b2a]">
+          <span class="count" data-target="150">0</span><span class="text-xl text-[#6885b5] align-top">+</span>
+        </h3>
+        <p class="text-gray-600 mt-2 text-base">Live Projects</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="bg-white py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+    <!-- Left Content -->
+    <div>
+      <h2 class="text-4xl font-bold text-[#0d1b2a] mb-6">Skillnexus Overview</h2>
+      <p class="text-gray-600 text-lg leading-relaxed mb-6">
+        Skillnexus Tech Solutions is a professional IT training organization dedicated to bridging the gap between academic knowledge and real-world industry practices. 
+        We empower students through structured industrial training, hands-on internship support, and practical project development — ensuring they are fully prepared for their tech careers.
+      </p>
+
+      <!-- Key Features -->
+      <ul class="space-y-4">
+        <li class="flex items-start">
+          <i class="fas fa-check-circle text-[#6885b5] mt-1 mr-3 text-xl"></i>
+          <span class="text-gray-700 text-base">6-Week & 6-Month Industrial Training programs aligned with industry standards.</span>
+        </li>
+        <li class="flex items-start">
+          <i class="fas fa-check-circle text-[#6885b5] mt-1 mr-3 text-xl"></i>
+          <span class="text-gray-700 text-base">Internship opportunities on real-time projects to build job-ready skills.</span>
+        </li>
+        <li class="flex items-start">
+          <i class="fas fa-check-circle text-[#6885b5] mt-1 mr-3 text-xl"></i>
+          <span class="text-gray-700 text-base">Expert mentorship and personalized project guidance throughout the training period.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Right Image -->
+    <div class="w-full">
+      <img src="{% static 'assets/images/overview.jpg' %}" alt="Skillnexus Training" class="w-full h-auto rounded-2xl shadow-xl object-cover">
+    </div>
+
+  </div>
+</section>
+
+<section class="bg-white py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+    <!-- left Side Image -->
+    <div class="w-full">
+      <img src="{% static 'assets/images/internship.jpg' %}" alt="Internship Support" class="w-full h-auto rounded-2xl shadow-xl object-cover">
+    </div>
+
+    <!-- right Side Content -->
+    <div>
+      <h2 class="text-4xl font-bold text-[#0d1b2a] mb-6">Internship Support at Skillnexus</h2>
+      <p class="text-gray-600 text-lg leading-relaxed mb-6">
+        At Skillnexus, we don't just teach — we prepare students for real careers. Our internship support ensures every student gets a chance to work on real-time industrial projects under professional guidance.
+      </p>
+
+      <ul class="space-y-4">
+        <li class="flex items-start">
+          <i class="fas fa-check-circle text-[#6885b5] mt-1 mr-3 text-xl"></i>
+          <span class="text-gray-700 text-base">Guaranteed internship opportunities with live IT projects.</span>
+        </li>
+        <li class="flex items-start">
+          <i class="fas fa-check-circle text-[#6885b5] mt-1 mr-3 text-xl"></i>
+          <span class="text-gray-700 text-base">Mentorship from experienced developers throughout internship.</span>
+        </li>
+        <li class="flex items-start">
+          <i class="fas fa-check-circle text-[#6885b5] mt-1 mr-3 text-xl"></i>
+          <span class="text-gray-700 text-base">Resume-building, interview prep & career guidance included.</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section class="bg-white py-20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+    <!-- Heading -->
+    <div class="mb-14">
+      <!-- <p class="text-sm uppercase tracking-widest text-[#6885b5] font-semibold">Skillnexus Purpose</p> -->
+      <div class="flex items-center justify-center mb-6">
+        <div class="h-px w-8 bg-gradient-to-r from-[#6885b5] to-transparent"></div>
+        <p class="mx-3 text-[#6885b5] font-semibold uppercase tracking-wide text-sm sm:text-base">Skillnexus Purpose</p>
+        <div class="h-px w-8 bg-gradient-to-l from-[#6885b5] to-transparent"></div>
+      </div>
+      <h2 class="text-4xl font-bold text-[#0d1b2a]">Our Vision & Mission</h2>
+      <div class="h-1 w-16 bg-[#6885b5] rounded mx-auto mt-4"></div>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+
+      <!-- Vision Card -->
+      <div class="bg-[#f8f9fc] border border-gray-200 rounded-2xl shadow hover:shadow-md transition duration-300 p-8 text-left">
+        <div class="flex items-center mb-4">
+          <div class="h-12 w-12 flex items-center justify-center rounded-full bg-[#6885b5] text-white text-xl">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-[#0d1b2a] ml-4">Our Vision</h3>
+        </div>
+        <p class="text-gray-700 text-base leading-relaxed">
+          To be a leading platform for transforming students into skilled professionals by providing practical, project-based learning that aligns with the latest industry trends and technologies.
+        </p>
+      </div>
+
+      <!-- Mission Card -->
+      <div class="bg-[#f8f9fc] border border-gray-200 rounded-2xl shadow hover:shadow-md transition duration-300 p-8 text-left">
+        <div class="flex items-center mb-4">
+          <div class="h-12 w-12 flex items-center justify-center rounded-full bg-[#6885b5] text-white text-xl">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-[#0d1b2a] ml-4">Our Mission</h3>
+        </div>
+        <p class="text-gray-700 text-base leading-relaxed">
+          To provide high-quality industrial training, internship support, and mentorship that empower students to build real-world IT solutions and launch successful tech careers.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray-50 py-16">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex items-center justify-center mb-6">
+      <div class="h-px w-8 bg-gradient-to-r from-[#6885b5] to-transparent"></div>
+      <p class="mx-3 text-[#6885b5] font-semibold uppercase tracking-wide text-sm sm:text-base">OUR TESTIMONIALS</p>
+      <div class="h-px w-8 bg-gradient-to-l from-[#6885b5] to-transparent"></div>
+    </div>
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+      What Students Say About Our IT Industrial Training
+    </h2>
+
+    <!-- Slider Container -->
+    <div class="overflow-hidden relative">
+      <div id="slider" class="flex transition-transform duration-700 ease-in-out">
+        <!-- Slide Group 1 -->
+        <div class="flex-shrink-0 flex w-full space-x-6">
+          <!-- Cards 1-3 -->
+          <div class="bg-white p-6 rounded-xl shadow-md w-1/3">
+            <div class="flex items-center space-x-4 mb-4">
+              <img src="https://randomuser.me/api/portraits/men/11.jpg" class="w-12 h-12 rounded-full" />
+              <div>
+                <h4 class="font-semibold">Aman Kumar</h4>
+                <p class="text-sm text-gray-500">B.Tech - CSE</p>
+              </div>
+            </div>
+            <div class="text-yellow-400 mb-2">★★★★★</div>
+            <p class="text-sm text-gray-600">Excellent training with hands-on projects. Learned Python and Django in depth.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md w-1/3">
+            <div class="flex items-center space-x-4 mb-4">
+              <img src="https://randomuser.me/api/portraits/women/21.jpg" class="w-12 h-12 rounded-full" />
+              <div>
+                <h4 class="font-semibold">Simran Kaur</h4>
+                <p class="text-sm text-gray-500">MCA Student</p>
+              </div>
+            </div>
+            <div class="text-yellow-400 mb-2">★★★★☆</div>
+            <p class="text-sm text-gray-600">Built a full web app. Amazing learning experience.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md w-1/3">
+            <div class="flex items-center space-x-4 mb-4">
+              <img src="https://randomuser.me/api/portraits/men/35.jpg" class="w-12 h-12 rounded-full" />
+              <div>
+                <h4 class="font-semibold">Rajat Verma</h4>
+                <p class="text-sm text-gray-500">Diploma in IT</p>
+              </div>
+            </div>
+            <div class="text-yellow-400 mb-2">★★★★★</div>
+            <p class="text-sm text-gray-600">Resume building and real-world projects helped a lot.</p>
+          </div>
+        </div>
+
+        <!-- Slide Group 2 -->
+        <div class="flex-shrink-0 flex w-full space-x-6">
+          <!-- Cards 4-6 -->
+          <div class="bg-white p-6 rounded-xl shadow-md w-1/3">
+            <div class="flex items-center space-x-4 mb-4">
+              <img src="https://randomuser.me/api/portraits/women/45.jpg" class="w-12 h-12 rounded-full" />
+              <div>
+                <h4 class="font-semibold">Nisha Rawat</h4>
+                <p class="text-sm text-gray-500">BCA Student</p>
+              </div>
+            </div>
+            <div class="text-yellow-400 mb-2">★★★★☆</div>
+            <p class="text-sm text-gray-600">Frontend and backend training was on point!</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md w-1/3">
+            <div class="flex items-center space-x-4 mb-4">
+              <img src="https://randomuser.me/api/portraits/men/22.jpg" class="w-12 h-12 rounded-full" />
+              <div>
+                <h4 class="font-semibold">Deepak Thakur</h4>
+                <p class="text-sm text-gray-500">B.Sc. CS</p>
+              </div>
+            </div>
+            <div class="text-yellow-400 mb-2">★★★★★</div>
+            <p class="text-sm text-gray-600">Confidence boosted with hands-on assignments.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md w-1/3">
+            <div class="flex items-center space-x-4 mb-4">
+              <img src="https://randomuser.me/api/portraits/women/66.jpg" class="w-12 h-12 rounded-full" />
+              <div>
+                <h4 class="font-semibold">Aarti Mehta</h4>
+                <p class="text-sm text-gray-500">B.Tech - IT</p>
+              </div>
+            </div>
+            <div class="text-yellow-400 mb-2">★★★★★</div>
+            <p class="text-sm text-gray-600">Converted internship to full-time offer!</p>
+          </div>
+        </div>
+
+        <!-- Slide Group 3 -->
+        <div class="flex-shrink-0 flex w-full space-x-6">
+          <!-- Cards 7-9 -->
+          <div class="bg-white p-6 rounded-xl shadow-md w-1/3">
+            <div class="flex items-center space-x-4 mb-4">
+              <img src="https://randomuser.me/api/portraits/men/44.jpg" class="w-12 h-12 rounded-full" />
+              <div>
+                <h4 class="font-semibold">Prashant Joshi</h4>
+                <p class="text-sm text-gray-500">M.Sc. IT</p>
+              </div>
+            </div>
+            <div class="text-yellow-400 mb-2">★★★★★</div>
+            <p class="text-sm text-gray-600">Basics to advanced — great teaching quality.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md w-1/3">
+            <div class="flex items-center space-x-4 mb-4">
+              <img src="https://randomuser.me/api/portraits/women/32.jpg" class="w-12 h-12 rounded-full" />
+              <div>
+                <h4 class="font-semibold">Neha Chauhan</h4>
+                <p class="text-sm text-gray-500">Final Year BCA</p>
+              </div>
+            </div>
+            <div class="text-yellow-400 mb-2">★★★★☆</div>
+            <p class="text-sm text-gray-600">Created my first portfolio website in training.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md w-1/3">
+            <div class="flex items-center space-x-4 mb-4">
+              <img src="https://randomuser.me/api/portraits/men/59.jpg" class="w-12 h-12 rounded-full" />
+              <div>
+                <h4 class="font-semibold">Vikas Rana</h4>
+                <p class="text-sm text-gray-500">Intern - Java Dev</p>
+              </div>
+            </div>
+            <div class="text-yellow-400 mb-2">★★★★★</div>
+            <p class="text-sm text-gray-600">Supportive instructors and real-world practice.</p>
+          </div>
+        </div>
+
+        <!-- Slide Group 4 -->
+        <div class="flex-shrink-0 flex w-full space-x-6">
+          <!-- Cards 10-12 -->
+          <div class="bg-white p-6 rounded-xl shadow-md w-1/3">
+            <div class="flex items-center space-x-4 mb-4">
+              <img src="https://randomuser.me/api/portraits/women/52.jpg" class="w-12 h-12 rounded-full" />
+              <div>
+                <h4 class="font-semibold">Sakshi Jain</h4>
+                <p class="text-sm text-gray-500">M.Tech - IT</p>
+              </div>
+            </div>
+            <div class="text-yellow-400 mb-2">★★★★★</div>
+            <p class="text-sm text-gray-600">Capstone project helped me in campus placement.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md w-1/3">
+            <div class="flex items-center space-x-4 mb-4">
+              <img src="https://randomuser.me/api/portraits/men/28.jpg" class="w-12 h-12 rounded-full" />
+              <div>
+                <h4 class="font-semibold">Rohit Sharma</h4>
+                <p class="text-sm text-gray-500">BCA Graduate</p>
+              </div>
+            </div>
+            <div class="text-yellow-400 mb-2">★★★★☆</div>
+            <p class="text-sm text-gray-600">Live project exposure boosted my confidence.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md w-1/3">
+            <div class="flex items-center space-x-4 mb-4">
+              <img src="https://randomuser.me/api/portraits/women/36.jpg" class="w-12 h-12 rounded-full" />
+              <div>
+                <h4 class="font-semibold">Priya Singh</h4>
+                <p class="text-sm text-gray-500">Intern - Python</p>
+              </div>
+            </div>
+            <div class="text-yellow-400 mb-2">★★★★★</div>
+            <p class="text-sm text-gray-600">I learned more in 2 months here than in college!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-[#f9fafb] py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+    <!-- Section Heading -->
+    <div class="mb-14">
+        <div class="flex items-center justify-center mb-6">
+            <div class="h-px w-8 bg-gradient-to-r from-[#6885b5] to-transparent"></div>
+            <p class="mx-3 text-[#6885b5] font-semibold uppercase tracking-wide text-sm sm:text-base">our Team</p>
+            <div class="h-px w-8 bg-gradient-to-l from-[#6885b5] to-transparent"></div>
+        </div>
+        <h2 class="text-4xl font-bold text-[#0d1b2a] mt-2">Meet Our Talented Team Members</h2>
+    </div>
+
+    <!-- Team Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 mt-10">
+      
+      <!-- Gourav Pathania -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition duration-300">
+        <img src="{% static 'assets/images/team1.jpg' %}" alt="Gourav Pathania" class="w-full h-72 object-cover">
+        <div class="p-4">
+          <h3 class="text-[#0d1b2a] text-lg font-semibold">Gourav Pathania</h3>
+          <p class="text-sm text-[#6885b5]">Chief Executive Officer</p>
+        </div>
+      </div>
+
+      <!-- Shivani Puri -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition duration-300">
+        <img src="{% static 'assets/images/team2.jpg' %}" alt="Shivani Puri" class="w-full h-72 object-cover">
+        <div class="p-4">
+          <h3 class="text-[#0d1b2a] text-lg font-semibold">Shivani Puri</h3>
+          <p class="text-sm text-[#6885b5]">Human Resource</p>
+        </div>
+      </div>
+
+      <!-- Vikram -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition duration-300">
+        <img src="{% static 'assets/images/team3.jpg' %}" alt="Vikram" class="w-full h-72 object-cover">
+        <div class="p-4">
+          <h3 class="text-[#0d1b2a] text-lg font-semibold">Vikram</h3>
+          <p class="text-sm text-[#6885b5]">Software Developer</p>
+        </div>
+      </div>
+
+      <!-- Rahul -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition duration-300">
+        <img src="{% static 'assets/images/team4.jpg' %}" alt="Rahul" class="w-full h-72 object-cover">
+        <div class="p-4">
+          <h3 class="text-[#0d1b2a] text-lg font-semibold">Rahul</h3>
+          <p class="text-sm text-[#6885b5]">SEO Expert</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="bg-[#f9fafb] py-24">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+      <!-- Left: Image -->
+      <div class="w-full">
+        <img src="/static/assets/images/faq.jpg" alt="FAQ Image" class="w-full h-auto rounded-xl shadow-lg" />
+      </div>
+
+      <!-- Right: FAQ Accordion -->
+      <div>
+        <!-- <h2 class="text-3xl font-bold text-[#0d1b2a] mb-8">Frequently Asked Questions</h2> -->
+            <div class="flex items-center justify-center mb-6">
+        <div class="h-px w-8 bg-gradient-to-r from-[#6885b5] to-transparent"></div>
+        <p class="mx-3 text-[#6885b5] font-semibold uppercase tracking-wide text-sm sm:text-base">Frequently Asked Questions</p>
+        <div class="h-px w-8 bg-gradient-to-l from-[#6885b5] to-transparent"></div>
+    </div>
+
+        <div id="faqContainer" class="space-y-4">
+
+          <!-- FAQ Item 1 (open by default) -->
+          <div class="border border-[#d1d5db] rounded-xl overflow-hidden">
+            <button class="faq-toggle w-full px-6 py-4 bg-white flex justify-between items-center">
+              <span class="font-semibold text-[#0d1b2a] text-left">What is industrial training and why is it important?</span>
+              <span class="icon text-[#6885b5] text-xl">−</span>
+            </button>
+            <div class="faq-content px-6 py-3 text-gray-600 bg-white">
+              Industrial training helps students gain hands-on experience on real-world technologies, making them industry-ready.
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="border border-[#d1d5db] rounded-xl overflow-hidden">
+            <button class="faq-toggle w-full px-6 py-4 bg-white flex justify-between items-center">
+              <span class="font-semibold text-[#0d1b2a] text-left">Who is eligible for industrial training at Skillnexus?</span>
+              <span class="icon text-[#6885b5] text-xl">+</span>
+            </button>
+            <div class="faq-content px-6 py-3 text-gray-600 bg-white hidden">
+              Any student pursuing B.Tech, BCA, MCA, or similar IT programs can join our training programs.
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="border border-[#d1d5db] rounded-xl overflow-hidden">
+            <button class="faq-toggle w-full px-6 py-4 bg-white flex justify-between items-center">
+              <span class="font-semibold text-[#0d1b2a] text-left">What technologies will I learn?</span>
+              <span class="icon text-[#6885b5] text-xl">+</span>
+            </button>
+            <div class="faq-content px-6 py-3 text-gray-600 bg-white hidden">
+              Python, Django, JavaScript, HTML, CSS, React, Git, databases, and full-stack deployment.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-gradient-to-br from-[#e6ecf7] via-white to-[#f0f4fc] py-16">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-stretch">
+
+    <!-- Left: Contact Info Cards -->
+    <div class="space-y-6">
+      <div class="flex items-center mb-6">
+        <div class="h-px w-8 bg-gradient-to-r from-[#6885b5] to-transparent"></div>
+        <p class="mx-3 text-[#6885b5] font-semibold uppercase tracking-wide text-sm sm:text-base">Get in touch</p>
+        <div class="h-px w-8 bg-gradient-to-l from-[#6885b5] to-transparent"></div>
+      </div>
+      <h2 class="text-4xl font-extrabold text-gray-800 leading-tight">
+        Need Help or Info? <br /> We’re Just One Message Away!
+      </h2>
+      <p class="text-gray-600">For training, career support, or demo classes — we're here for you.</p>
+
+      <div class="space-y-4">
+        <!-- Location -->
+        <div class="flex items-center gap-4 bg-white rounded-lg p-4 shadow-md border-l-4 border-green-600">
+          <div class="text-green-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"></path>
+              <circle cx="12" cy="9" r="2.5"></circle>
+            </svg>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-800">Location</p>
+            <p class="text-sm text-gray-500">SCO 80-81-82, Sector 34-C, Chandigarh</p>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="flex items-center gap-4 bg-white rounded-lg p-4 shadow-md border-l-4 border-green-600">
+          <div class="text-green-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16v16H4z" fill="none"/>
+              <path d="M22 6L12 13 2 6"></path>
+            </svg>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-800">Email</p>
+            <p class="text-sm text-gray-500">info@skillnexus.com</p>
+          </div>
+        </div>
+
+        <!-- Phone -->
+        <div class="flex items-center gap-4 bg-white rounded-lg p-4 shadow-md border-l-4 border-green-600">
+          <div class="text-green-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92V21a2 2 0 01-2.18 2 19.72 19.72 0 01-16.4-16.4A2 2 0 015 3h4.09a2 2 0 012 1.72c.12.81.37 1.6.72 2.34a2 2 0 01-.45 2.11L9.1 11.1a16 16 0 006.9 6.9l1.93-1.93a2 2 0 012.11-.45c.74.35 1.53.6 2.34.72A2 2 0 0122 16.92z"></path>
+            </svg>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-800">Call</p>
+            <p class="text-sm text-gray-500">+91 8146382470</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Form (height matched) -->
+    <div class="bg-white shadow-xl rounded-xl p-8 h-full flex flex-col justify-between">
+      <form class="flex-grow">
+        <div class="grid grid-cols-1 gap-4">
+          <input type="text" placeholder="Full Name*" class="border border-gray-300 px-4 py-2 rounded-md focus:ring-2 focus:ring-orange-500 outline-none" />
+          <input type="text" placeholder="Phone Number*" class="border border-gray-300 px-4 py-2 rounded-md focus:ring-2 focus:ring-orange-500 outline-none" />
+          <input type="email" placeholder="Email Address*" class="border border-gray-300 px-4 py-2 rounded-md focus:ring-2 focus:ring-orange-500 outline-none" />
+          <select class="border border-gray-300 px-4 py-2 rounded-md text-gray-500 focus:ring-2 focus:ring-orange-500">
+            <option>Select a Course</option>
+            <option>Python Full Stack</option>
+            <option>MERN Stack</option>
+            <option>UI/UX Design</option>
+          </select>
+          <textarea rows="4" placeholder="Your Message..." class="border border-gray-300 px-4 py-2 rounded-md focus:ring-2 focus:ring-orange-500 outline-none"></textarea>
+          <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-md transition">
+            Submit Now
+          </button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+  const counters = document.querySelectorAll('.count');
+  let started = false;
+
+  function animateCount(counter) {
+    const target = +counter.getAttribute('data-target');
+    let count = 0;
+    const increment = Math.ceil(target / 100); // speed control
+
+    const update = () => {
+      if (count < target) {
+        count += increment;
+        if (count > target) count = target;
+        counter.innerText = count;
+        requestAnimationFrame(update);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    update();
+  }
+
+  function handleStatsScroll() {
+    const section = document.getElementById('stats');
+    if (!started && section.getBoundingClientRect().top < window.innerHeight - 100) {
+      counters.forEach(animateCount);
+      started = true;
+    }
+  }
+
+  window.addEventListener('scroll', handleStatsScroll);
+</script>
+
+<!--  review js  -->
+<script>
+  let currentIndex = 0;
+  const slider = document.getElementById("slider");
+  const totalSlides = slider.children.length;
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    slider.style.transform = `translateX(-${100 * currentIndex}%)`;
+  }, 4000);
+</script>
+
+<!-- FAQ JS -->
+ <script>
+  const faqToggles = document.querySelectorAll('.faq-toggle');
+
+  faqToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const parent = toggle.parentElement;
+      const content = parent.querySelector('.faq-content');
+      const icon = toggle.querySelector('.icon');
+
+      // Close all
+      document.querySelectorAll('.faq-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.faq-toggle .icon').forEach(ic => ic.innerText = '+');
+
+      // Open clicked
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.innerText = '−';
+      } else {
+        content.classList.add('hidden');
+        icon.innerText = '+';
+      }
+    });
+  });
+</script>
+
+
+{% endblock %}
