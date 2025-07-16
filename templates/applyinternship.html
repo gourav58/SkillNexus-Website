@@ -1,0 +1,26 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact Us - SkillNexus{% endblock %}
+
+{% block content %}
+
+<!-- Apply Internship Banner -->
+<section class="relative h-64 md:h-80 lg:h-96 overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img src="{% static 'assets/images/applyinternship.jpg' %}" alt="Apply Internship Banner" class="w-full h-full object-cover brightness-50">
+  </div>
+
+  <!-- Overlay Text -->
+  <div class="relative z-10 flex items-center justify-center h-full text-center">
+    <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-wide">
+      Apply Internship
+    </h1>
+  </div>
+</section>
+
+
+
+{% endblock %}

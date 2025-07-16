@@ -1,0 +1,228 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact Us - SkillNexus{% endblock %}
+
+{% block content %}
+
+<main>
+
+<!-- Conatct us  Banner -->
+<section class="relative h-64 md:h-80 lg:h-96 overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img src="{% static 'assets/images/contactus.jpg' %}" alt="Conatct Us Banner" class="w-full h-full object-cover brightness-50">
+  </div>
+
+  <!-- Overlay Text -->
+  <div class="relative z-10 flex items-center justify-center h-full text-center">
+    <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-wide">
+      Contact us
+    </h1>
+  </div>
+</section>
+
+<!-- Contact Us Section -->
+<section id="contact" class="py-24 text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
+
+      <!-- Left: Contact Form -->
+      <div class="bg-white text-[#0d1b2a] p-10 rounded-2xl shadow-xl flex flex-col justify-center h-full">
+        <div>
+          <h2 class="text-sm uppercase font-semibold text-[#6885b5] mb-2">Contact Us</h2>
+          <h3 class="text-3xl sm:text-4xl font-bold mb-4 leading-tight">
+            Have a Query?<br />Let's Discuss!
+          </h3>
+          <p class="text-gray-600 mb-6">Fill out the form below and we'll get back to you shortly.</p>
+
+          <form method="POST" action="#" class="space-y-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <input type="text" name="name" placeholder="Full Name*" required
+                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#6885b5]">
+              <input type="tel" name="phone" placeholder="Phone*" required
+                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#6885b5]">
+            </div>
+            <input type="email" name="email" placeholder="Email"
+              class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#6885b5]">
+            <textarea name="message" rows="4" placeholder="Message"
+              class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#6885b5]"></textarea>
+            <button type="submit"
+              class="bg-[#6885b5] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#5772a2] transition">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Right: Image with Floating Stats -->
+      <div class="relative h-full flex items-center justify-center">
+        <div class="relative w-full h-full">
+          <img src="/static/assets/images/contactus1.jpg" alt="Team" class="w-full h-full object-cover rounded-2xl shadow-lg">
+
+          <!-- Floating Stats - Top Left -->
+          <div class="absolute top-6 left-6 bg-white rounded-xl shadow-md px-4 py-3 text-center w-32">
+            <div class="text-[#6885b5] text-xl font-bold">10K+</div>
+            <div class="text-sm text-gray-700">Total Students</div>
+          </div>
+
+          <!-- Floating Stats - Bottom Right -->
+          <div class="absolute bottom-6 right-6 bg-white rounded-xl shadow-md px-4 py-3 text-center w-32">
+            <div class="text-[#6885b5] text-xl font-bold">50+</div>
+            <div class="text-sm text-gray-700">Total Courses</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact Info Cards Section -->
+<section class="bg-white py-12">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex items-center justify-center mb-4">
+        <div class="h-px w-8 bg-gradient-to-r from-[#6885b5] to-transparent"></div>
+        <p class="mx-3 text-[#6885b5] font-semibold uppercase tracking-wide text-sm sm:text-base">Contact Details</p>
+        <div class="h-px w-8 bg-gradient-to-l from-[#6885b5] to-transparent"></div>
+    </div>
+    <h2 class="text-center text-2xl font-bold text-[#0d1b2a] mb-10">We’re Happy To Assist</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+
+      <!-- Email Card -->
+      <div class="border border-[#e5e7eb] rounded-xl p-6 shadow-sm hover:shadow-md transition">
+        <div class="text-[#24d3aa] text-3xl mb-2">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h4 class="font-semibold text-[#0d1b2a]">Connect Via Email</h4>
+        <p class="text-sm text-[#6885b5] mt-1">info@skillnexus.in</p>
+      </div>
+
+      <!-- Phone Card -->
+      <div class="border border-[#e5e7eb] rounded-xl p-6 shadow-sm hover:shadow-md transition">
+        <div class="text-[#4c83ff] text-3xl mb-2">
+          <i class="fas fa-phone-alt"></i>
+        </div>
+        <h4 class="font-semibold text-[#0d1b2a]">Call Us Anytime</h4>
+        <p class="text-sm text-[#6885b5] mt-1">+91 98765 43210</p>
+      </div>
+
+      <!-- Address Card -->
+      <div class="border border-[#e5e7eb] rounded-xl p-6 shadow-sm hover:shadow-md transition">
+        <div class="text-[#fbbc05] text-3xl mb-2">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h4 class="font-semibold text-[#0d1b2a]">Find Us Here</h4>
+        <p class="text-sm text-gray-600 mt-1">Himachal Pradesh, India</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Location Map Section -->
+<section id="location" class="bg-[#f9fafb] py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Heading -->
+    <div class="text-center mb-12">
+      <div class="flex items-center justify-center mb-4">
+        <div class="h-px w-8 bg-gradient-to-r from-[#6885b5] to-transparent"></div>
+        <p class="mx-3 text-[#6885b5] font-semibold uppercase tracking-wide text-sm sm:text-base">Find Us</p>
+        <div class="h-px w-8 bg-gradient-to-l from-[#6885b5] to-transparent"></div>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-[#0d1b2a]">Skillnexus Tech Solutions Location</h2>
+      <p class="mt-2 text-gray-600 text-sm sm:text-base">We're always here to connect — visit us at our Himachal office.</p>
+    </div>
+
+    <!-- Map Embed -->
+    <div class="rounded-2xl overflow-hidden shadow-lg">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d219623.06005908315!2d76.4751701!3d31.1048145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b5088459a6fef%3A0x8c40410be657365c!2sHimachal%20Pradesh!5e0!3m2!1sen!2sin!4v1658765432101" 
+        width="100%" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+  </div>
+</section>
+
+<!-- Training Courses Section -->
+<section id="courses" class="bg-[#f4f6f8] py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+      <div class="flex items-center justify-center mb-4">
+        <div class="h-px w-8 bg-gradient-to-r from-[#6885b5] to-transparent"></div>
+        <p class="mx-3 text-[#6885b5] font-semibold uppercase tracking-wide text-sm sm:text-base">Training Courses</p>
+        <div class="h-px w-8 bg-gradient-to-l from-[#6885b5] to-transparent"></div>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-[#0d1b2a]">Industry-Focused IT Programs</h2>
+      <p class="mt-3 text-gray-600 text-base">Hands-on training designed for real-world application and professional growth.</p>
+    </div>
+
+    <!-- Courses Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+      
+      <!-- Course Card -->
+      <div class="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition duration-300 hover:-translate-y-1 border-t-4 border-[#6885b5]">
+        <div class="text-[#6885b5] text-3xl mb-4">
+          <i class="fas fa-python"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-[#0d1b2a] mb-2">Python with Django</h3>
+        <p class="text-sm text-gray-600">Build scalable backend applications using Python and Django framework.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition duration-300 hover:-translate-y-1 border-t-4 border-[#6885b5]">
+        <div class="text-[#6885b5] text-3xl mb-4">
+          <i class="fas fa-code"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-[#0d1b2a] mb-2">Frontend Development</h3>
+        <p class="text-sm text-gray-600">Master HTML, CSS, JavaScript, and responsive design using Tailwind and React.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition duration-300 hover:-translate-y-1 border-t-4 border-[#6885b5]">
+        <div class="text-[#6885b5] text-3xl mb-4">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-[#0d1b2a] mb-2">Full Stack Projects</h3>
+        <p class="text-sm text-gray-600">Create live applications using both frontend and backend technologies with GitHub integration.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition duration-300 hover:-translate-y-1 border-t-4 border-[#6885b5]">
+        <div class="text-[#6885b5] text-3xl mb-4">
+          <i class="fas fa-user-graduate"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-[#0d1b2a] mb-2">Internship Support</h3>
+        <p class="text-sm text-gray-600">Work on real tasks, get certification, and gain industrial exposure with mentorship.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition duration-300 hover:-translate-y-1 border-t-4 border-[#6885b5]">
+        <div class="text-[#6885b5] text-3xl mb-4">
+          <i class="fas fa-database"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-[#0d1b2a] mb-2">Database & SQL</h3>
+        <p class="text-sm text-gray-600">Design, query, and manage databases with hands-on MySQL and PostgreSQL training.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition duration-300 hover:-translate-y-1 border-t-4 border-[#6885b5]">
+        <div class="text-[#6885b5] text-3xl mb-4">
+          <i class="fas fa-code-branch"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-[#0d1b2a] mb-2">Git & Version Control</h3>
+        <p class="text-sm text-gray-600">Collaborate with teams using Git & GitHub, manage projects, and track progress.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+
+{% endblock %}

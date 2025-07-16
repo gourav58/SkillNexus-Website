@@ -18,5 +18,5 @@ def Blog(request):
 def Contactus(request):
     return render(request, 'contactus.html')
 
-def BookDemo(request):
-    return render(request, 'bookdemo.html')
+def ApplyInternship(request):
+    return render(request, 'applyinternship.html')
