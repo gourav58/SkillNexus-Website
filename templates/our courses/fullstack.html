@@ -1,0 +1,113 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Full Stack - SkillNexus{% endblock %}
+
+{% block content %}
+
+<!-- Full Stack Banner -->
+<section class="relative h-64 md:h-80 lg:h-96 overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img src="{% static 'assets/images/fullstack.jpg' %}" alt="Full Stack Banner" class="w-full h-full object-cover brightness-50">
+  </div>
+
+  <!-- Overlay Text -->
+  <div class="relative z-10 flex items-center justify-center h-full text-center">
+    <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-wide">
+      Full Stack Training Chandigarh
+    </h1>
+  </div>
+</section>
+
+
+<!-- Custom Contact Section -->
+<section class="bg-gradient-to-br from-[#e6ecf7] via-white to-[#f0f4fc] py-16">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-stretch">
+
+    <!-- Left: Contact Info Cards -->
+    <div class="space-y-6">
+      <div class="flex items-center mb-6">
+        <div class="h-px w-8 bg-gradient-to-r from-[#6885b5] to-transparent"></div>
+        <p class="mx-3 text-[#6885b5] font-semibold uppercase tracking-wide text-sm sm:text-base">Get in touch</p>
+        <div class="h-px w-8 bg-gradient-to-l from-[#6885b5] to-transparent"></div>
+      </div>
+      <h2 class="text-4xl font-extrabold text-gray-800 leading-tight">
+        Need Help or Info? <br /> We’re Just One Message Away!
+      </h2>
+      <p class="text-gray-600">For training, career support, or demo classes — we're here for you.</p>
+
+      <div class="space-y-4">
+        <!-- Location -->
+        <div class="flex items-center gap-4 bg-white rounded-lg p-4 shadow-md border-l-4 border-green-600">
+          <div class="text-green-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"></path>
+              <circle cx="12" cy="9" r="2.5"></circle>
+            </svg>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-800">Location</p>
+            <p class="text-sm text-gray-500">SCO 80-81-82, Sector 34-C, Chandigarh</p>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="flex items-center gap-4 bg-white rounded-lg p-4 shadow-md border-l-4 border-green-600">
+          <div class="text-green-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16v16H4z" fill="none"/>
+              <path d="M22 6L12 13 2 6"></path>
+            </svg>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-800">Email</p>
+            <p class="text-sm text-gray-500">info@skillnexus.com</p>
+          </div>
+        </div>
+
+        <!-- Phone -->
+        <div class="flex items-center gap-4 bg-white rounded-lg p-4 shadow-md border-l-4 border-green-600">
+          <div class="text-green-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92V21a2 2 0 01-2.18 2 19.72 19.72 0 01-16.4-16.4A2 2 0 015 3h4.09a2 2 0 012 1.72c.12.81.37 1.6.72 2.34a2 2 0 01-.45 2.11L9.1 11.1a16 16 0 006.9 6.9l1.93-1.93a2 2 0 012.11-.45c.74.35 1.53.6 2.34.72A2 2 0 0122 16.92z"></path>
+            </svg>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-800">Call</p>
+            <p class="text-sm text-gray-500">+91 8146382470</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Form (height matched) -->
+    <div class="bg-white shadow-xl rounded-xl p-8 h-full flex flex-col justify-between">
+      <form class="flex-grow">
+        <div class="grid grid-cols-1 gap-4">
+          <input type="text" placeholder="Full Name*" class="border border-gray-300 px-4 py-2 rounded-md focus:ring-2 focus:ring-orange-500 outline-none" />
+          <input type="text" placeholder="Phone Number*" class="border border-gray-300 px-4 py-2 rounded-md focus:ring-2 focus:ring-orange-500 outline-none" />
+          <input type="email" placeholder="Email Address*" class="border border-gray-300 px-4 py-2 rounded-md focus:ring-2 focus:ring-orange-500 outline-none" />
+          <select class="border border-gray-300 px-4 py-2 rounded-md text-gray-500 focus:ring-2 focus:ring-orange-500">
+            <option>Select a Course</option>
+            <option>Python Full Stack</option>
+            <option>MERN Stack</option>
+            <option>UI/UX Design</option>
+          </select>
+          <textarea rows="4" placeholder="Your Message..." class="border border-gray-300 px-4 py-2 rounded-md focus:ring-2 focus:ring-orange-500 outline-none"></textarea>
+          <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-md transition">
+            Submit Now
+          </button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+
+{% endblock %}

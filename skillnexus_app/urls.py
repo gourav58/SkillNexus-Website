@@ -8,6 +8,7 @@ urlpatterns = [
     path('about-us/', views.Aboutus, name='about-us'),
     path('services/', views.Services, name='services'),
     path('courses/', views.Courses, name='courses'),
+    path('full-stack/', views.PythonFullStack, name='full-stack'),
     path('blog/', views.Blog, name='blog'),
     path('contact-us/', views.Contactus, name='contact-us'),
     path('apply-internship/', views.ApplyInternship, name='apply-internship'),

@@ -12,6 +12,9 @@ def Services(request):
 def Courses(request):
     return render(request, 'courses.html')
 
+def PythonFullStack(request):
+    return render(request, 'our courses/fullstack.html')
+
 def Blog(request):
     return render(request, 'blog.html')
 

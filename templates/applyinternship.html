@@ -2,7 +2,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Contact Us - SkillNexus{% endblock %}
+{% block title %}Apply Internship - SkillNexus{% endblock %}
 
 {% block content %}
 
@@ -21,6 +21,414 @@
   </div>
 </section>
 
+<section class="bg-white py-16 px-4">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+    
+    <!-- Internship Form -->
+    <div class="md:col-span-2 bg-gray-50 p-8 rounded-xl shadow">
+      <h2 class="text-2xl font-bold text-orange-600 mb-6">INTERNSHIP FORM</h2>
+      
+      <form action="#" method="POST" enctype="multipart/form-data" class="space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Name -->
+          <div>
+            <label class="text-sm font-medium text-gray-700">Name</label>
+            <input type="text" name="name" required
+                   class="mt-1 w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-orange-500" />
+          </div>
+          <!-- Father Name -->
+          <div>
+            <label class="text-sm font-medium text-gray-700">Father's Name</label>
+            <input type="text" name="father_name" required
+                   class="mt-1 w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-orange-500" />
+          </div>
+          <!-- Email -->
+          <div>
+            <label class="text-sm font-medium text-gray-700">Email</label>
+            <input type="email" name="email" required
+                   class="mt-1 w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-orange-500" />
+          </div>
+          <!-- Phone -->
+          <div>
+            <label class="text-sm font-medium text-gray-700">Phone</label>
+            <input type="tel" name="phone" required
+                   class="mt-1 w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-orange-500" />
+          </div>
+          <!-- Institute -->
+          <div class="md:col-span-2">
+            <label class="text-sm font-medium text-gray-700">Institute Name</label>
+            <input type="text" name="institute" required
+                   class="mt-1 w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-orange-500" />
+          </div>
+          <!-- Duration -->
+          <div class="md:col-span-2">
+            <label class="text-sm font-medium text-gray-700">Duration</label>
+            <div class="flex items-center gap-6 mt-2">
+              <label class="flex items-center gap-2">
+                <input type="radio" name="duration" value="6 Months" class="accent-orange-500" required>
+                <span class="text-sm">6 Months</span>
+              </label>
+              <label class="flex items-center gap-2">
+                <input type="radio" name="duration" value="6 Weeks" class="accent-orange-500">
+                <span class="text-sm">6 Weeks</span>
+              </label>
+            </div>
+          </div>
+          <!-- Technology -->
+          <div class="md:col-span-2">
+            <label class="text-sm font-medium text-gray-700">Technology</label>
+            <input type="text" name="technology" placeholder="e.g. Django, React, Python"
+                   class="mt-1 w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-orange-500" />
+          </div>
+          <!-- Reference -->
+          <div class="md:col-span-2">
+            <label class="text-sm font-medium text-gray-700">Reference</label>
+            <input type="text" name="reference"
+                   class="mt-1 w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-orange-500" />
+          </div>
+          <!-- Address -->
+          <div class="md:col-span-2">
+            <label class="text-sm font-medium text-gray-700">Address</label>
+            <textarea name="address" rows="2" required
+                      class="mt-1 w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+          </div>
+          <!-- Motivation -->
+          <div class="md:col-span-2">
+            <label class="text-sm font-medium text-gray-700">Why do you want to do this internship?</label>
+            <textarea name="motivation" rows="3" required
+                      class="mt-1 w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+          </div>
+        </div>
 
+        <!-- CAPTCHA -->
+        <div class="flex items-center mt-4">
+          <input type="checkbox" id="captcha" name="captcha" required class="mr-2">
+          <label for="captcha" class="text-sm text-gray-600">I'm not a robot</label>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="pt-4">
+          <button type="submit"
+                  class="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold shadow hover:bg-orange-700 transition">
+            SUBMIT
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Right Info Panel -->
+    <div class="bg-gray-50 p-6 rounded-xl shadow space-y-6">
+      <div>
+        <h3 class="text-xl font-semibold text-black-600 mb-3">Download Brochure</h3>
+        <a href="#" class="inline-block bg-orange-600 text-white px-5 py-2 rounded hover:bg-orange-700 transition">
+          Download Now
+        </a>
+      </div>
+
+      <hr class="my-4">
+
+      <h3 class="text-xl font-bold text-gray-800 mb-2">Why Join Our Internship?</h3>
+      <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+        <li>Hands-on project experience with real clients</li>
+        <li>Get mentored by experienced industry professionals</li>
+        <li>Internship completion certificate & LinkedIn endorsement</li>
+        <li>Opportunity for full-time placement</li>
+        <li>Resume building + Interview preparation support</li>
+      </ul>
+
+      <hr class="my-4">
+
+      <h4 class="text-md font-semibold text-gray-700">After You Apply:</h4>
+      <ol class="list-decimal list-inside text-sm text-gray-600 space-y-1">
+        <li>Application Review (within 48 hrs)</li>
+        <li>Short Telephonic Interview</li>
+        <li>Confirmation Email + Internship Start Date</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- Training Courses Section -->
+<section id="courses" class="bg-[#f4f6f8] py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+      <div class="flex items-center justify-center mb-4">
+        <div class="h-px w-8 bg-gradient-to-r from-[#6885b5] to-transparent"></div>
+        <p class="mx-3 text-[#6885b5] font-semibold uppercase tracking-wide text-sm sm:text-base">Training Courses</p>
+        <div class="h-px w-8 bg-gradient-to-l from-[#6885b5] to-transparent"></div>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-[#0d1b2a]">Industry-Focused IT Programs</h2>
+      <p class="mt-3 text-gray-600 text-base">Hands-on training designed for real-world application and professional growth.</p>
+    </div>
+
+    <!-- Courses Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+      
+      <!-- Course Card -->
+      <div class="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition duration-300 hover:-translate-y-1 border-t-4 border-[#6885b5]">
+        <div class="text-[#6885b5] text-3xl mb-4">
+          <i class="fas fa-python"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-[#0d1b2a] mb-2">Python with Django</h3>
+        <p class="text-sm text-gray-600">Build scalable backend applications using Python and Django framework.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition duration-300 hover:-translate-y-1 border-t-4 border-[#6885b5]">
+        <div class="text-[#6885b5] text-3xl mb-4">
+          <i class="fas fa-code"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-[#0d1b2a] mb-2">Frontend Development</h3>
+        <p class="text-sm text-gray-600">Master HTML, CSS, JavaScript, and responsive design using Tailwind and React.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition duration-300 hover:-translate-y-1 border-t-4 border-[#6885b5]">
+        <div class="text-[#6885b5] text-3xl mb-4">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-[#0d1b2a] mb-2">Full Stack Projects</h3>
+        <p class="text-sm text-gray-600">Create live applications using both frontend and backend technologies with GitHub integration.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition duration-300 hover:-translate-y-1 border-t-4 border-[#6885b5]">
+        <div class="text-[#6885b5] text-3xl mb-4">
+          <i class="fas fa-user-graduate"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-[#0d1b2a] mb-2">Internship Support</h3>
+        <p class="text-sm text-gray-600">Work on real tasks, get certification, and gain industrial exposure with mentorship.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition duration-300 hover:-translate-y-1 border-t-4 border-[#6885b5]">
+        <div class="text-[#6885b5] text-3xl mb-4">
+          <i class="fas fa-database"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-[#0d1b2a] mb-2">Database & SQL</h3>
+        <p class="text-sm text-gray-600">Design, query, and manage databases with hands-on MySQL and PostgreSQL training.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition duration-300 hover:-translate-y-1 border-t-4 border-[#6885b5]">
+        <div class="text-[#6885b5] text-3xl mb-4">
+          <i class="fas fa-code-branch"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-[#0d1b2a] mb-2">Git & Version Control</h3>
+        <p class="text-sm text-gray-600">Collaborate with teams using Git & GitHub, manage projects, and track progress.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-gradient-to-b from-gray-50 to-white py-24">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center text-gray-900 mb-20">
+      👨‍🏫 Our Industry-Leading Mentors
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+      <!-- Mentor 1 -->
+      <div class="relative bg-white rounded-3xl shadow-xl p-6 pt-16 text-center hover:shadow-2xl transition duration-300 ease-in-out">
+        <div class="absolute -top-12 left-1/2 transform -translate-x-1/2">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Mentor" class="w-24 h-24 rounded-full border-4 border-white shadow-md">
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mt-4">Arjun Mehra</h3>
+        <p class="text-sm text-orange-600 mb-3">Backend Architect – 5+ yrs</p>
+        <p class="text-sm text-gray-600 mb-5">
+          Expert in building robust APIs and scalable backend systems using Python and Django. Led multiple enterprise SaaS platforms and mentors students on real-world backend practices.
+        </p>
+        <div class="flex justify-center gap-2 flex-wrap text-sm">
+          <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full">Python</span>
+          <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full">Django</span>
+          <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full">APIs</span>
+        </div>
+      </div>
+
+      <!-- Mentor 2 -->
+      <div class="relative bg-white rounded-3xl shadow-xl p-6 pt-16 text-center hover:shadow-2xl transition duration-300 ease-in-out">
+        <div class="absolute -top-12 left-1/2 transform -translate-x-1/2">
+          <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Mentor" class="w-24 h-24 rounded-full border-4 border-white shadow-md">
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mt-4">Sneha Kapoor</h3>
+        <p class="text-sm text-orange-600 mb-3">UI/UX Designer – 7+ yrs</p>
+        <p class="text-sm text-gray-600 mb-5">
+          Leads frontend design with deep focus on user experience and modern React interfaces. Mentored 500+ developers in UI/UX best practices and rapid prototyping.
+        </p>
+        <div class="flex justify-center gap-2 flex-wrap text-sm">
+          <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full">ReactJS</span>
+          <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full">UI/UX</span>
+          <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full">Figma</span>
+        </div>
+      </div>
+
+      <!-- Mentor 3 -->
+      <div class="relative bg-white rounded-3xl shadow-xl p-6 pt-16 text-center hover:shadow-2xl transition duration-300 ease-in-out">
+        <div class="absolute -top-12 left-1/2 transform -translate-x-1/2">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mentor" class="w-24 h-24 rounded-full border-4 border-white shadow-md">
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mt-4">Vikram Sharma</h3>
+        <p class="text-sm text-orange-600 mb-3">AI/ML Specialist – 10+ yrs</p>
+        <p class="text-sm text-gray-600 mb-5">
+          Industry veteran in machine learning and AI-powered apps. Has worked with global companies and trained 1000+ students in data science and ML engineering.
+        </p>
+        <div class="flex justify-center gap-2 flex-wrap text-sm">
+          <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full">AI</span>
+          <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full">Machine Learning</span>
+          <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full">Python</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="bg-white py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
+
+      <!-- Left Content -->
+      <div>
+        <div class="flex items-center mb-6">
+          <div class="h-px w-8 bg-gradient-to-r from-[#6885b5] to-transparent"></div>
+          <p class="mx-3 text-[#6885b5] font-semibold uppercase tracking-wide text-sm sm:text-base">Why Choose Us</p>
+          <div class="h-px w-8 bg-gradient-to-l from-[#6885b5] to-transparent"></div>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-snug mb-4">
+          For Excellent Performance We Focus
+          on <span class="text-[#2c569c]">During Training.</span>
+        </h2>
+        <p class="text-gray-600 mb-6 text-base">
+          We provide 100% Practical and Live project-based training
+        </p>
+
+        <!-- List with Icons -->
+        <ul class="space-y-3 text-sm sm:text-base text-gray-800">
+          <li class="flex items-start gap-3">
+            <span class="text-[#70b62c] text-lg">✔️</span>
+            100% Free Placement Assistance
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-[#70b62c] text-lg">✔️</span>
+            Complete Practical and Project-based Training
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-[#70b62c] text-lg">✔️</span>
+            Industrial Training by Industry Experts
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-[#70b62c] text-lg">✔️</span>
+            Special Doubt/Extra Classes
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-[#70b62c] text-lg">✔️</span>
+            Wifi, Study Material, and Video Modules
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-[#70b62c] text-lg">✔️</span>
+            Online-Live Classes Available for Distant Students
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-[#70b62c] text-lg">✔️</span>
+            Special PD and Interview Preparation Classes
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right Image (matches left content height) -->
+      <div class="h-full">
+        <img src="/static/assets/images/choose1.png" alt="Why Choose Us" class="w-full h-full object-cover rounded-lg shadow-md">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Custom Contact Section -->
+<section class="bg-gradient-to-br from-[#e6ecf7] via-white to-[#f0f4fc] py-16">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-stretch">
+
+    <!-- Left: Contact Info Cards -->
+    <div class="space-y-6">
+      <div class="flex items-center mb-6">
+        <div class="h-px w-8 bg-gradient-to-r from-[#6885b5] to-transparent"></div>
+        <p class="mx-3 text-[#6885b5] font-semibold uppercase tracking-wide text-sm sm:text-base">Get in touch</p>
+        <div class="h-px w-8 bg-gradient-to-l from-[#6885b5] to-transparent"></div>
+      </div>
+      <h2 class="text-4xl font-extrabold text-gray-800 leading-tight">
+        Need Help or Info? <br /> We’re Just One Message Away!
+      </h2>
+      <p class="text-gray-600">For training, career support, or demo classes — we're here for you.</p>
+
+      <div class="space-y-4">
+        <!-- Location -->
+        <div class="flex items-center gap-4 bg-white rounded-lg p-4 shadow-md border-l-4 border-green-600">
+          <div class="text-green-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"></path>
+              <circle cx="12" cy="9" r="2.5"></circle>
+            </svg>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-800">Location</p>
+            <p class="text-sm text-gray-500">SCO 80-81-82, Sector 34-C, Chandigarh</p>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="flex items-center gap-4 bg-white rounded-lg p-4 shadow-md border-l-4 border-green-600">
+          <div class="text-green-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16v16H4z" fill="none"/>
+              <path d="M22 6L12 13 2 6"></path>
+            </svg>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-800">Email</p>
+            <p class="text-sm text-gray-500">info@skillnexus.com</p>
+          </div>
+        </div>
+
+        <!-- Phone -->
+        <div class="flex items-center gap-4 bg-white rounded-lg p-4 shadow-md border-l-4 border-green-600">
+          <div class="text-green-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92V21a2 2 0 01-2.18 2 19.72 19.72 0 01-16.4-16.4A2 2 0 015 3h4.09a2 2 0 012 1.72c.12.81.37 1.6.72 2.34a2 2 0 01-.45 2.11L9.1 11.1a16 16 0 006.9 6.9l1.93-1.93a2 2 0 012.11-.45c.74.35 1.53.6 2.34.72A2 2 0 0122 16.92z"></path>
+            </svg>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-800">Call</p>
+            <p class="text-sm text-gray-500">+91 8146382470</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Form (height matched) -->
+    <div class="bg-white shadow-xl rounded-xl p-8 h-full flex flex-col justify-between">
+      <form class="flex-grow">
+        <div class="grid grid-cols-1 gap-4">
+          <input type="text" placeholder="Full Name*" class="border border-gray-300 px-4 py-2 rounded-md focus:ring-2 focus:ring-orange-500 outline-none" />
+          <input type="text" placeholder="Phone Number*" class="border border-gray-300 px-4 py-2 rounded-md focus:ring-2 focus:ring-orange-500 outline-none" />
+          <input type="email" placeholder="Email Address*" class="border border-gray-300 px-4 py-2 rounded-md focus:ring-2 focus:ring-orange-500 outline-none" />
+          <select class="border border-gray-300 px-4 py-2 rounded-md text-gray-500 focus:ring-2 focus:ring-orange-500">
+            <option>Select a Course</option>
+            <option>Python Full Stack</option>
+            <option>MERN Stack</option>
+            <option>UI/UX Design</option>
+          </select>
+          <textarea rows="4" placeholder="Your Message..." class="border border-gray-300 px-4 py-2 rounded-md focus:ring-2 focus:ring-orange-500 outline-none"></textarea>
+          <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-md transition">
+            Submit Now
+          </button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
 
 {% endblock %}
